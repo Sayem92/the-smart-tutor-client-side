@@ -16,8 +16,8 @@ const Navbar = () => {
         <div className="relative flex items-center justify-between">
           <Link
             to="/"
-            aria-label="Smart Tutor"
-            title="Smart Tutor"
+            aria-label="The Smart Tutor"
+            title="The Smart Tutor"
             className="inline-flex items-center"
           >
             <img src={logo} className='w-12' alt="" />
@@ -42,12 +42,12 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/"
-                aria-label="Tutorial"
-                title="Tutorial"
+                to="/tutorials"
+                aria-label="Tutorials"
+                title="Tutorials"
                 className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
               >
-                Tutorial
+                Tutorials
               </Link>
             </li>
             <li>
@@ -121,14 +121,14 @@ const Navbar = () => {
                     <div>
                       <Link
                         to="/"
-                        aria-label="Smart Tutor"
-                        title="Smart Tutor"
+                        aria-label="The Smart Tutor"
+                        title="The Smart Tutor"
                         className="inline-flex items-center"
                       >
                         <img src={logo} className='w-12' alt="" />
 
                         <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                         Smart Tutor
+                        The Smart Tutor
                         </span>
                       </Link>
                     </div>
@@ -165,12 +165,12 @@ const Navbar = () => {
 
                       <li>
                         <Link
-                          to="/"
-                          aria-label="Tutorial"
-                          title="Tutorial"
+                          to="/tutorials"
+                          aria-label="Tutorials"
+                          title="Tutorials"
                           className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
-                         Tutorial
+                         Tutorials 
                         </Link>
                       </li>
                       <li>
