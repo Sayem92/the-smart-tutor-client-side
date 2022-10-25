@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import landing from '../../assets/landing-pic.jpg'
+
 
 const Home = () => {
     return (
