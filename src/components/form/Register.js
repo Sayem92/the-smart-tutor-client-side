@@ -8,8 +8,8 @@ import toast from 'react-hot-toast';
 
 
 const Register = () => {
-    const { createUser, updateName } = useContext(AuthContext);
     const [error, setError] = useState('');
+    const { createUser, updateName , googleSignIn, setUser} = useContext(AuthContext);
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -51,6 +51,17 @@ const Register = () => {
 
     }
 
+    const handleGoogleSignIn = ()=>{
+        googleSignIn()
+        .then(result =>{
+            const user = result.user;
+            console.log(user);
+            setUser(user)
+            toast.success('Google login successful')
+        })
+        .catch(error => console.log(error))
+    }
+
 
     const handleNameUpdate = (name, photoURL)=>{
         const profile = {displayName: name, photoURL: photoURL}
@@ -67,11 +78,11 @@ const Register = () => {
 
                 <div className="relative z-0 mb-6 w-full group">
                     <input type="text" name="name" id="name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-                    <label htmlFor="name" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Full name</label>
+                    <label htmlFor="name" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-1 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Full name</label>
                 </div>
                 <div className="relative z-0 mb-7 w-full group">
                     <input type="text" name="photoURL" id="photoURL" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
-                    <label htmlFor="photoURL" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">PhotoURL</label>
+                    <label htmlFor="photoURL" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-1 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">PhotoURL</label>
                 </div>
                 <div className="relative z-0 mb-6 w-full group">
                     <input type="email" name="email" id="email" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
@@ -92,11 +103,11 @@ const Register = () => {
                     <span className=''>------------- Or -------------</span>
                 </div>
                 <div className=''>
-                    <div className='flex justify-between items-center border p-2 rounded-full mb-3 bg-gray-600 text-white'>
+                    <div onClick={handleGoogleSignIn} className='flex justify-between items-center border p-2 rounded-full mb-3 bg-gray-600 text-white hover:bg-gray-500'>
                         <img src={google} className='w-8' alt="" />
                         <p className='pr-4'>Continue With Google</p>
                     </div>
-                    <div className='flex justify-between items-center border p-2 rounded-full bg-gray-600 text-white'>
+                    <div className='flex justify-between items-center border p-2 rounded-full bg-gray-600 text-white hover:bg-gray-500'>
                         <img src={github} className='w-8 bg-white rounded-full' alt="" />
                         <p className='pr-4'>Continue With Github</p>
                     </div>

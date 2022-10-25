@@ -8,7 +8,7 @@ import toast from 'react-hot-toast';
 
 
 const Login = () => {
-    const { signIn } = useContext(AuthContext)
+    const { signIn, googleSignIn, setUser } = useContext(AuthContext)
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -31,6 +31,18 @@ const Login = () => {
             console.error(error)
         })
 
+    }
+
+
+    const handleGoogleSignIn = ()=>{
+        googleSignIn()
+        .then(result =>{
+            const user = result.user;
+            console.log(user);
+            setUser(user)
+            toast.success('Google login successful')
+        })
+        .catch(error => console.log(error))
     }
 
 
@@ -61,11 +73,12 @@ const Login = () => {
                     <span className=''>------------- Or -------------</span>
                 </div>
                 <div className=''>
-                    <div className='flex justify-between items-center border p-2 rounded-full mb-3 bg-gray-600 text-white'>
+                    <div  onClick={handleGoogleSignIn} 
+                    className='flex justify-between items-center border p-2 rounded-full mb-3 bg-gray-600 text-white hover:bg-gray-500'>
                         <img src={google} className='w-8' alt="" />
                         <p className='pr-4'>Continue With Google</p>
                     </div>
-                    <div className='flex justify-between items-center border p-2 rounded-full bg-gray-600 text-white'>
+                    <div className='flex justify-between items-center border p-2 rounded-full bg-gray-600 text-white hover:bg-gray-500'>
                         <img src={github} className='w-8 bg-white rounded-full' alt="" />
                         <p className='pr-4'>Continue With Github</p>
                     </div>
