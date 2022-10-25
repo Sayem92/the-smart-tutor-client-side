@@ -7,7 +7,7 @@ import { AuthContext } from '../../contexts/UserContext/UserContext';
 const Navbar = () => {
   const {user} = useContext(AuthContext)
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    console.log(user);
+    // console.log(user);
 
     return (
         <div>
@@ -43,11 +43,11 @@ const Navbar = () => {
             <li>
               <Link
                 to="/"
-                aria-label="Courses"
-                title="Courses"
+                aria-label="Tutorial"
+                title="Tutorial"
                 className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
               >
-                Courses
+                Tutorial
               </Link>
             </li>
             <li>
@@ -73,9 +73,11 @@ const Navbar = () => {
             
             
                       
-                      
-                      
-                     
+               {user?.uid ?  
+
+               <img className='w-12 rounded-3xl' src={user?.photoURL} alt="" title={user?.displayName} />  
+
+                     :
                       <li>
                         <Link
                           to="/login"
@@ -87,7 +89,7 @@ const Navbar = () => {
                         </Link>
                       </li>
                       
-                     
+      }                   
 
           </ul>
           <div className="lg:hidden">
@@ -164,11 +166,11 @@ const Navbar = () => {
                       <li>
                         <Link
                           to="/"
-                          aria-label="Courses"
-                          title="Courses"
+                          aria-label="Tutorial"
+                          title="Tutorial"
                           className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
-                         Courses
+                         Tutorial
                         </Link>
                       </li>
                       <li>
@@ -192,7 +194,11 @@ const Navbar = () => {
                         </Link>
                       </li>
                       
-                    
+                { user?.uid ? 
+
+                    <img className='w-12 rounded-3xl' src={user?.photoURL} alt="" title={user?.displayName} />  
+
+                      :
                       
                       <li>
                         <Link
@@ -204,7 +210,7 @@ const Navbar = () => {
                           Login
                         </Link>
                       </li>
-                     
+            }                    
 
                     </ul>
                   </nav>
