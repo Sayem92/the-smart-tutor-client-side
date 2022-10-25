@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png'
+import { AuthContext } from '../../contexts/UserContext/UserContext';
 
 const Navbar = () => {
+  const {user} = useContext(AuthContext)
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    console.log(user);
 
     return (
         <div>
@@ -19,7 +23,7 @@ const Navbar = () => {
             <img src={logo} className='w-12' alt="" />
 
             <span className="ml-2 text-xl font-bold tracking-wide text-white uppercase">
-             Smart Tutor
+            The Smart Tutor
             </span>
           </Link>
 
