@@ -8,7 +8,7 @@ import toast from 'react-hot-toast';
 
 
 const Login = () => {
-    const { signIn, googleSignIn, setUser } = useContext(AuthContext)
+    const { signIn, googleSignIn, githubSignIn, setUser } = useContext(AuthContext)
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -46,6 +46,18 @@ const Login = () => {
     }
 
 
+    const handleGithubSignIn = () =>{
+        githubSignIn()
+        .then(result =>{
+            const user = result.user;
+            console.log(user);
+            setUser(user)
+            toast.success('Github login successful')
+        })
+        .catch(error => console.log(error))
+
+    }
+
 
     return (
         <div className='container mx-auto my-16 px-3 lg:px-52 '>
@@ -78,7 +90,8 @@ const Login = () => {
                         <img src={google} className='w-8' alt="" />
                         <p className='pr-4'>Continue With Google</p>
                     </div>
-                    <div className='flex justify-between items-center border p-2 rounded-full bg-gray-600 text-white hover:bg-gray-500'>
+                    <div onClick={handleGithubSignIn}
+                     className='flex justify-between items-center border p-2 rounded-full bg-gray-600 text-white hover:bg-gray-500'>
                         <img src={github} className='w-8 bg-white rounded-full' alt="" />
                         <p className='pr-4'>Continue With Github</p>
                     </div>
