@@ -1,6 +1,41 @@
-# Getting Started with Create React App
+## App Name 
+👉👉 The Smart Tutor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live Site Client
+[]
+
+## Code Link Client
+[https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-Sayem92]
+
+## Code Link Server
+[https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-Sayem92]
+
+
+## key features
+✔ Daily learn something.
+✔ Recap concepts.
+✔ Tutorials on different topics.
+✔ Easy to use.
+✔ No hassels of loading.
+✔ Save bandwidth.
+✔ Track your progress on statistics section.
+✔ Read blog on desire topic everyday.
+✔ Free of coast.
+
+
+## Dependency used in this project
+1. [tailwind css library](https://tailwindcss.com/docs/installation).
+2. [Mamba UI](https://www.mambaui.com/components).
+3. [Kitwind  Kometa UI](https://kitwind.io/products/kometa/components/).
+4. [Daisy ui](https://daisyui.com/).
+5. [Flow bite](https://flowbite.com/).
+6. [Create React App](https://github.com/facebook/create-react-app).
+7. [React Router Dom](https://reactrouter.com/en/main).
+8. [Firebase](https://firebase.google.com/).
+9. [React-hot-toast](https://react-hot-toast.com/).
+10. [React icon](https://react-icons.github.io/react-icons/).
+11. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
