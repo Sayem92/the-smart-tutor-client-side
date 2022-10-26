@@ -15,7 +15,9 @@ const ErrorPage = () => {
 		</svg>
                         <p className="text-2xl font-semibold md:text-3xl text-red-500">Sorry, we couldn't find this page.</p>
                         <p className="mt-4 mb-8 text-gray-600">But don't worry, you can find plenty of other things on our homepage.</p>
-                        <Link rel="noopener noreferrer" to="/" className="px-8 py-3 font-semibold rounded bg-violet-400 text-white">Back to homepage</Link>
+                        <Link to='/'>
+                        <button rel="noopener noreferrer"  className="px-2 lg:px-8 py-3 font-semibold rounded bg-violet-400 text-white">Back to homepage</button>
+                        </Link>
                     </div>
                 </div>
             </section>

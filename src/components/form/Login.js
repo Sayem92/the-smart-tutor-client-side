@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import google from '../../assets/google.png';
 import github from '../../assets/github.png';
 import { Link } from 'react-router-dom';
@@ -9,6 +9,7 @@ import toast from 'react-hot-toast';
 
 const Login = () => {
     const { signIn, googleSignIn, githubSignIn, setUser } = useContext(AuthContext)
+    const [error, setError] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -25,10 +26,12 @@ const Login = () => {
             console.log(user);
             toast.success('login successfully')
             form.reset()
+            setError('')
 
         })
         .catch(error=>{
             console.error(error)
+            setError(error.message)
         })
 
     }
@@ -78,7 +81,7 @@ const Login = () => {
 
                 <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
                 <p className='mt-2 text-sm'>Don't have an account? <Link to='/register'><span className='text-blue-600 underline'>create an account</span></Link></p>
-
+                <p className='mt-2 text-red-600 '>{error}</p>
             </form>
             <div className='px-3 lg:px-64'>
                 <div className=' py-5 text-center'>
