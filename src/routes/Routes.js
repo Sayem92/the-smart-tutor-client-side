@@ -22,6 +22,10 @@ import PrivateRoutes from "./PrivateRoutes";
                 element: <Home></Home>
             },
             {
+                path:'/home',
+                element: <Home></Home>
+            },
+            {
                 path:'/tutorials',
                 loader: ()=> fetch('http://localhost:5000/tutorials'),
                 element: <Tutorials></Tutorials>

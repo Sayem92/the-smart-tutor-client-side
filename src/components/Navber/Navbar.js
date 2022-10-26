@@ -14,11 +14,11 @@ const Navbar = () => {
     textDecoration: "underline",
   };
 
-  const handleLogout =()=>{
-        logOut()
-        .then(()=>{})
-        .catch(error=>console.log(error))
-        toast.success('logout successfully')
+  const handleLogout = () => {
+    logOut()
+      .then(() => { })
+      .catch(error => console.log(error))
+    toast.success('logout successfully')
   }
 
 
@@ -54,6 +54,19 @@ const Navbar = () => {
                   </span>
                   <span>Light</span>
                 </label>
+              </li>
+              <li>
+                <NavLink
+                  style={({ isActive }) =>
+                    isActive ? activeStyle : undefined
+                  }
+                  to="/home"
+                  aria-label="home"
+                  title="Home"
+                  className="font-medium tracking-wide text-white transition-colors duration-200 hover:text-deep-purple-accent-400"
+                >
+                  Home
+                </NavLink>
               </li>
               <li>
                 <NavLink
@@ -203,6 +216,20 @@ const Navbar = () => {
 
                         <li>
                           <NavLink
+                            style={({ isActive }) =>
+                              isActive ? activeStyle : undefined
+                            }
+                            to="/home"
+                            aria-label="home"
+                            title="Home"
+                            className="font-medium tracking-wide text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
+                          >
+                            Home
+                          </NavLink>
+                        </li>
+
+                        <li>
+                          <NavLink
                             to="/tutorials"
                             style={({ isActive }) =>
                               isActive ? activeStyle : undefined
@@ -245,7 +272,7 @@ const Navbar = () => {
                           <>
                             <li>
                               <button
-                                 onClick={handleLogout}
+                                onClick={handleLogout}
                                 className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black bg-sky-400  transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                                 aria-label="Logout"
                                 title="Logout"
@@ -254,7 +281,7 @@ const Navbar = () => {
                               </button>
                             </li>
                             <li className='pl-28'>
-                            <img className='w-12 rounded-3xl' src={user?.photoURL} alt="" title={user?.displayName} />
+                              <img className='w-12 rounded-3xl' src={user?.photoURL} alt="" title={user?.displayName} />
                             </li>
                           </>
 
