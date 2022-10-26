@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Topics = (props) => {
     const {id,image, title, description} = props.tutorial;
@@ -11,7 +12,9 @@ const Topics = (props) => {
                 </div>
                 <p className="text-gray-300 text-sm">{description.slice(0,65)}...</p>
 
-                <button type="button" className="flex items-center justify-center w-full p-3 mt-6 font-semibold tracking-wide rounded-md bg-blue-500 hover:bg-blue-600 text-white">Get Started</button>
+              <Link to={`/tutorials/${id}`}>
+              <button type="button" className="flex items-center justify-center w-full p-3 mt-6 font-semibold tracking-wide rounded-md bg-blue-500 hover:bg-blue-600 text-white">Get Started</button>
+              </Link>
             </div>
         </div>
     );
