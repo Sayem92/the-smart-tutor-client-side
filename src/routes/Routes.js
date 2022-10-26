@@ -5,6 +5,7 @@ import Faq from "../components/FAQ/Faq";
 import Login from "../components/form/Login";
 import Register from "../components/form/Register";
 import Home from "../components/Home/Home";
+import Profile from "../components/Profile/Profile";
 import CheckOutPage from "../components/TuitorialAll/CheckOutPage/CheckOutPage";
 import DetailsPage from "../components/TuitorialAll/Tutorials/DetailsPage/DetailsPage";
 import Tutorials from "../components/TuitorialAll/Tutorials/Tutorials";
@@ -55,6 +56,10 @@ import PrivateRoutes from "./PrivateRoutes";
             {
                 path:'/register',
                 element: <Register></Register>
+            },
+            {
+                path:'/profile',
+                element: <Profile></Profile>
             }
         ]
     }

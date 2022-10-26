@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useContext } from 'react';
 import toast from 'react-hot-toast';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/logo.png'
 import { AuthContext } from '../../contexts/UserContext/UserContext';
 
@@ -123,7 +123,9 @@ const Navbar = () => {
                     </button>
                   </li>
 
-                  <img className='w-12 rounded-3xl' src={user?.photoURL} alt="" title={user?.displayName} />
+                 <Link to='/profile'>
+                 <img className='w-12 rounded-3xl' src={user?.photoURL} alt="" title={user?.displayName} />
+                 </Link>
 
                 </>
 
@@ -281,7 +283,9 @@ const Navbar = () => {
                               </button>
                             </li>
                             <li className='pl-28'>
+                            <Link to='/profile'>
                               <img className='w-12 rounded-3xl' src={user?.photoURL} alt="" title={user?.displayName} />
+                              </Link>
                             </li>
                           </>
 
