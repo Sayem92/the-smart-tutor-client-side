@@ -4,12 +4,17 @@ import github from '../../assets/github.png';
 import { useContext } from 'react';
 import { AuthContext } from '../../contexts/UserContext/UserContext';
 import toast from 'react-hot-toast';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 
 const Register = () => {
     const [error, setError] = useState('');
     const { createUser, updateName , googleSignIn, githubSignIn, setUser} = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation()
+    const from = location?.state?.from?.pathname || '/'
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -42,12 +47,14 @@ const Register = () => {
             form.reset()
             setError('');
             handleNameUpdate(name, photoURL)
+            navigate(from, {replace: true});
 
         })
         .catch(error=>{
             console.error(error)
             setError(error.message)
         })
+        
 
     }
 
@@ -58,6 +65,7 @@ const Register = () => {
             console.log(user);
             setUser(user)
             toast.success('Google login successful')
+            navigate(from, {replace: true});
         })
         .catch(error => console.log(error))
     }
@@ -69,6 +77,7 @@ const Register = () => {
             console.log(user);
             setUser(user)
             toast.success('Github login successful')
+            navigate(from, {replace: true});
         })
         .catch(error => console.log(error))
 
@@ -86,7 +95,7 @@ const Register = () => {
         <div className='container mx-auto my-16 px-3 lg:px-52 '>
 
             <form onSubmit={handleSubmit} className='border border-blue-700 rounded-lg p-6'>
-                <h2 className='text-2xl text-orange-400 mb-6'>Create an account</h2>
+                <h2 className='flex justify-center text-3xl text-orange-400 mb-6'>Create an account</h2>
 
                 <div className="relative z-0 mb-6 w-full group">
                     <input type="text" name="name" id="name" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />

@@ -7,7 +7,7 @@ const CheckOutPage = () => {
     // console.log(checkOutPageInfo);
     return (
             <div className='flex justify-center items-center m-5 lg:my-48'>
-        <div className="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md bg-green-400 ">
+        <div className="p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md  bg-green-400 ">
           
                 <h5 className="mb-2 text-2xl font-bold tracking-tight  dark:text-white">{checkOutPageInfo?.title}</h5>
            

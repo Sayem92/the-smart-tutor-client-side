@@ -57,7 +57,9 @@ const UserContext = ({ children }) => {
     }, [])
 
     const authInfo = { 
-        user, 
+        user,
+        loading,
+        setLoading, 
         setUser,
         createUser, 
         signIn,

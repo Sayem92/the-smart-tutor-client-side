@@ -9,6 +9,7 @@ import CheckOutPage from "../components/TuitorialAll/CheckOutPage/CheckOutPage";
 import DetailsPage from "../components/TuitorialAll/Tutorials/DetailsPage/DetailsPage";
 import Tutorials from "../components/TuitorialAll/Tutorials/Tutorials";
 import Main from "../layout/Main";
+import PrivateRoutes from "./PrivateRoutes";
 
  export const router = createBrowserRouter([
     {
@@ -33,7 +34,7 @@ import Main from "../layout/Main";
             {
                 path:'/tutorials/detailsPage/:id',
                 loader: ({params})=> fetch(`http://localhost:5000/tutorials/detailsPage/${params.id}`),
-                element: <CheckOutPage />
+                element: <PrivateRoutes><CheckOutPage /></PrivateRoutes>
             },
             {
                 path:'/faq',

@@ -3,7 +3,7 @@ import { FaCheckCircle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Options = ({tutorial}) => {
-    console.log(tutorial.id);
+    // console.log(tutorial.id);
     return (
         <div>
               <div className='flex justify-center items-center'>

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import Topics from './Topics';
-import { FaCheckCircle } from 'react-icons/fa';
+
 import Options from './Options/Options';
 
 const Tutorials = () => {
     const tutorials = useLoaderData();
-    console.log(tutorials);
+    // console.log(tutorials);
     return (
         <div className="grid grid-cols-1  lg:grid-cols-4 gap-4 container mt-5">
 

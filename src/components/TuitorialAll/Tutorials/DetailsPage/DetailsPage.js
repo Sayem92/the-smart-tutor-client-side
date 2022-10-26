@@ -14,7 +14,7 @@ const DetailsPage = () => {
                 <h2 className=" py-4 pl-6  font-bold text-3xl text-gray-900">{title}</h2>
                 <div className='mr-5'>
                     <Link to={`/tutorials/detailsPage/${id}`}>
-                       <button className="btn btn-success">Pdf</button>
+                       <button className="btn btn-success hover:bg-green-600">Pdf</button>
                        </Link>
                 </div>
                 </div>
@@ -24,11 +24,11 @@ const DetailsPage = () => {
                 <div className=" pl-6 my-4 pr-5">
                     <p className='text-xl'>{description}</p>
                     {
-                        tips.map(tip=><li>{tip}</li>)
+                        tips.map(tip=><li key={Math.random()*10}>{tip}</li>)
                     }
                     <div className="m-6 justify-center">
                        <Link to={`/tutorials/detailsPage/${id}`}>
-                       <button className="btn btn-success">Get Premium Access</button>
+                       <button className="btn btn-success hover:bg-green-500">Get Premium Access</button>
                        </Link>
                     </div>
                 </div>
