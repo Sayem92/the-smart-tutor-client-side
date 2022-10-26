@@ -5,6 +5,7 @@ import Faq from "../components/FAQ/Faq";
 import Login from "../components/form/Login";
 import Register from "../components/form/Register";
 import Home from "../components/Home/Home";
+import CheckOutPage from "../components/TuitorialAll/CheckOutPage/CheckOutPage";
 import DetailsPage from "../components/TuitorialAll/Tutorials/DetailsPage/DetailsPage";
 import Tutorials from "../components/TuitorialAll/Tutorials/Tutorials";
 import Main from "../layout/Main";
@@ -28,6 +29,11 @@ import Main from "../layout/Main";
                 path:'/tutorials/:id',
                 loader: ({params})=> fetch(`http://localhost:5000/tutorials/${params.id}`),
                 element: <DetailsPage></DetailsPage>
+            },
+            {
+                path:'/tutorials/detailsPage/:id',
+                loader: ({params})=> fetch(`http://localhost:5000/tutorials/detailsPage/${params.id}`),
+                element: <CheckOutPage />
             },
             {
                 path:'/faq',
