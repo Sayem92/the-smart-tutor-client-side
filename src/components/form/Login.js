@@ -17,7 +17,7 @@ const Login = () => {
     const location = useLocation()
     const from = location?.state?.from?.pathname || '/';
 
-
+    // form submit type
     const handleSubmit = (e) => {
         e.preventDefault()
         const form = e.target;
@@ -26,7 +26,7 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
 
-
+        // user sign in
         signIn(email, password)
             .then(result => {
                 const user = result.user;
@@ -46,13 +46,14 @@ const Login = () => {
             })
 
     }
-
+    // user email state a add
     const handleBlurEmail = event=>{
         const email = event.target.value;
         setUserEmail(email)
         
     }
 
+    // password reset function
     const handlePasswordReset = () => {
         if(!userEmail){
             toast('Please enter your valid email');
@@ -68,6 +69,7 @@ const Login = () => {
         })
     }
 
+    // google login 
     const handleGoogleSignIn = () => {
         googleSignIn()
             .then(result => {
@@ -80,7 +82,7 @@ const Login = () => {
             .catch(error => console.log(error))
     }
 
-
+    // github login
     const handleGithubSignIn = () => {
         githubSignIn()
             .then(result => {

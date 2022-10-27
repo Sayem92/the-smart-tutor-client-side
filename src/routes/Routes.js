@@ -45,7 +45,6 @@ import PrivateRoutes from "./PrivateRoutes";
                 element: <DetailsPage></DetailsPage>
             },
 
-
             {
                 path:'/tutorials/detailsPage/:id',
                 loader: ({params})=> fetch(`https://assignment-10-server-one.vercel.app/tutorials/detailsPage/${params.id}`),

@@ -9,27 +9,28 @@ import SingleCategory from './SingleCategory';
 const CategoryTutorials = () => {
     const [category, setCategory] = useState('')
     const allCategory = useLoaderData();
-    // console.log(allCategory);
+    
 
     const handlerCategory = (e) => {
         const name= e.target.innerText
         setCategory(name)
     }
-    // console.log(category);
-
+  
+    // category type value
     const newCategory = allCategory.filter(single => single?.category == category)
-    // console.log(newCategory);
+  
 
     return (
         <div>
 
             <div className="grid grid-cols-1  lg:grid-cols-3 gap-4 container mx-auto mt-5">
 
-                <div className="space-y-2 bg-gray-700 h-72 m-2 py-5 rounded ml-7 lg:ml-5">
+                <div className="space-y-2 bg-gray-700 h-96 m-2 py-5 rounded ml-7 lg:ml-5">
                     <h2 className="text-xl font-semibold tracking-widest uppercase mb-2 text-orange-300 pl-4">All Category here</h2>
                     <div className="flex flex-col items-start pl-4 space-y-1 text-white">
 
-
+                {/* side menu display  */}
+                
                         <div onClick={handlerCategory}
                             className='flex justify-center items-center py-2 hover:text-black'>
                             <FaCheckCircle className='mr-2' />
@@ -63,6 +64,8 @@ const CategoryTutorials = () => {
 
                     </div>
                 </div>
+
+        {/* category type show display  */}
 
                 <div className='col-span-2 '>
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 p-2 '>

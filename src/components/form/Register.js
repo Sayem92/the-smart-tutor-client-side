@@ -18,12 +18,15 @@ const Register = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        
         const form = e.target;
         const name = form.name.value;
         const photoURL = form.photoURL.value;
         const email = form.email.value;
         const password = form.password.value;
-        // console.log(name, photoURL, email, password);
+       
+
+        // password validation
         if(!/[A-Z]/.test(password)){
             setError('Password at least one letter capital')
             return
@@ -38,7 +41,7 @@ const Register = () => {
             return
         }
 
-
+        // user account create
         createUser(email, password)
         .then(result =>{
             const user = result.user;
@@ -58,6 +61,7 @@ const Register = () => {
 
     }
 
+    // google login
     const handleGoogleSignIn = ()=>{
         googleSignIn()
         .then(result =>{
@@ -70,6 +74,7 @@ const Register = () => {
         .catch(error => console.log(error))
     }
 
+    // github login
     const handleGithubSignIn = () =>{
         githubSignIn()
         .then(result =>{
@@ -83,7 +88,7 @@ const Register = () => {
 
     }
 
-
+    // user name update
     const handleNameUpdate = (name, photoURL)=>{
         const profile = {displayName: name, photoURL: photoURL}
         updateName(profile)
