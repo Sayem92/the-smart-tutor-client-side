@@ -8,9 +8,9 @@ import UserContext from './contexts/UserContext/UserContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UserContext>
+      <UserContext>
         <App />
-    </UserContext>
+      </UserContext>
   </React.StrictMode>
 );
 

@@ -115,7 +115,7 @@ const Navbar = () => {
                   <li>
                     <button
                       onClick={handleLogout}
-                      className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white bg-sky-400  transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                      className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white hover:bg-sky-500 bg-sky-400  transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                       aria-label="Logout"
                       title="Logout"
                     >
@@ -123,9 +123,9 @@ const Navbar = () => {
                     </button>
                   </li>
 
-                 <Link to='/profile'>
-                 <img className='w-12 rounded-3xl' src={user?.photoURL} alt="" title={user?.displayName} />
-                 </Link>
+                  <Link to='/profile'>
+                    <img className='w-12 rounded-3xl' src={user?.photoURL} alt="" title={user?.displayName} />
+                  </Link>
 
                 </>
 
@@ -134,7 +134,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     to="/login"
-                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white bg-sky-400   transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white hover:bg-sky-500 bg-sky-400   transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                     aria-label="Login"
                     title="Login"
                   >
@@ -264,7 +264,7 @@ const Navbar = () => {
                             <li>
                               <button
                                 onClick={handleLogout}
-                                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black bg-sky-400  transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-black  bg-sky-400  transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                                 aria-label="Logout"
                                 title="Logout"
                               >
@@ -272,8 +272,8 @@ const Navbar = () => {
                               </button>
                             </li>
                             <li className='pl-28'>
-                            <Link to='/profile'>
-                              <img className='w-12 rounded-3xl' src={user?.photoURL} alt="" title={user?.displayName} />
+                              <Link to='/profile'>
+                                <img className='w-12 rounded-3xl' src={user?.photoURL} alt="" title={user?.displayName} />
                               </Link>
                             </li>
                           </>

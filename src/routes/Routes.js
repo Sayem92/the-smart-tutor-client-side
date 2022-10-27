@@ -13,61 +13,61 @@ import Tutorials from "../components/TuitorialAll/Tutorials/Tutorials";
 import Main from "../layout/Main";
 import PrivateRoutes from "./PrivateRoutes";
 
- export const router = createBrowserRouter([
+export const router = createBrowserRouter([
     {
-        path:'/',
+        path: '/',
         element: <Main></Main>,
         errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
-                path:'/',
+                path: '/',
                 element: <Home></Home>
             },
             {
-                path:'/home',
+                path: '/home',
                 element: <Home></Home>
             },
             {
-                path:'/tutorials',
-                loader: ()=> fetch("https://assignment-10-server-one.vercel.app/tutorials"),
+                path: '/tutorials',
+                loader: () => fetch("https://assignment-10-server-one.vercel.app/tutorials"),
                 element: <Tutorials></Tutorials>
-            },
-           
-            {
-                path:'/category/all',
-                loader: ()=> fetch(`https://assignment-10-server-one.vercel.app/category/all`),
-                element: <CategoryTutorials/>
             },
 
             {
-                path:'/category/detailsPage/:id',
-                loader: ({params})=> fetch(`https://assignment-10-server-one.vercel.app/tutorials/${params.id}`),
+                path: '/category/all',
+                loader: () => fetch(`https://assignment-10-server-one.vercel.app/category/all`),
+                element: <CategoryTutorials />
+            },
+
+            {
+                path: '/category/detailsPage/:id',
+                loader: ({ params }) => fetch(`https://assignment-10-server-one.vercel.app/tutorials/${params.id}`),
                 element: <DetailsPage></DetailsPage>
             },
 
             {
-                path:'/tutorials/detailsPage/:id',
-                loader: ({params})=> fetch(`https://assignment-10-server-one.vercel.app/tutorials/detailsPage/${params.id}`),
+                path: '/tutorials/detailsPage/:id',
+                loader: ({ params }) => fetch(`https://assignment-10-server-one.vercel.app/tutorials/detailsPage/${params.id}`),
                 element: <PrivateRoutes><CheckOutPage /></PrivateRoutes>
             },
             {
-                path:'/faq',
+                path: '/faq',
                 element: <Faq></Faq>
             },
             {
-                path:'/blog',
+                path: '/blog',
                 element: <Blog></Blog>
             },
             {
-                path:'/login',
+                path: '/login',
                 element: <Login></Login>
             },
             {
-                path:'/register',
+                path: '/register',
                 element: <Register></Register>
             },
             {
-                path:'/profile',
+                path: '/profile',
                 element: <Profile></Profile>
             }
         ]

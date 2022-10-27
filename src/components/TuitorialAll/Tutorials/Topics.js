@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Topics = (props) => {
     const { id, image, title, description } = props.tutorial;
-    
+
     // display all tutorials ar component 
-    
+
     return (
         <div className='h-96 mb-2'>
             <div className=" p-4 mb-4 rounded-md shadow-md bg-gray-800 text-gray-50">

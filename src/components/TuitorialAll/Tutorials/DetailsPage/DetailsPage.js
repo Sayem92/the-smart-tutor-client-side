@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 
 const DetailsPage = () => {
-    const details = useLoaderData(); 
+    const details = useLoaderData();
     const { id, image, title, description, tips } = details;
 
     return (
