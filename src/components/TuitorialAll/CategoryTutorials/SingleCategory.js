@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Topics = (props) => {
-    const {id,image, title, description, category} = props.tutorial;
-    // console.log(category);
+const SingleCategory = (props) => {
+    const {id,image, title, description, category} = props.category
     return (
-        <div className='h-96 mb-2'>
+       
+            <div className='h-96 mb-2'>
             <div className=" p-4 mb-4 rounded-md shadow-md bg-gray-800 text-gray-50">
                 <img src={image} alt="" className="object-cover object-center w-full rounded-md h-40 bg-gray-500" />
                 <div className="mt-6 mb-2">
@@ -18,7 +18,8 @@ const Topics = (props) => {
               </Link>
             </div>
         </div>
+        
     );
 };
 
-export default Topics;
+export default SingleCategory;

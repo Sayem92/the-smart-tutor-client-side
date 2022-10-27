@@ -6,8 +6,10 @@ import Login from "../components/form/Login";
 import Register from "../components/form/Register";
 import Home from "../components/Home/Home";
 import Profile from "../components/Profile/Profile";
+import CategoryTutorials from "../components/TuitorialAll/CategoryTutorials/CategoryTutorials";
 import CheckOutPage from "../components/TuitorialAll/CheckOutPage/CheckOutPage";
 import DetailsPage from "../components/TuitorialAll/Tutorials/DetailsPage/DetailsPage";
+import Options from "../components/TuitorialAll/Tutorials/Options/Options";
 import Tutorials from "../components/TuitorialAll/Tutorials/Tutorials";
 import Main from "../layout/Main";
 import PrivateRoutes from "./PrivateRoutes";
@@ -31,11 +33,24 @@ import PrivateRoutes from "./PrivateRoutes";
                 loader: ()=> fetch('http://localhost:5000/tutorials'),
                 element: <Tutorials></Tutorials>
             },
+            // {
+            //     path:'/category/all',
+            //     loader: ()=> fetch('http://localhost:5000/category/name'),
+            //     element: <Options></Options>
+            // },
             {
-                path:'/tutorials/:id',
+                path:'/category/all',
+                loader: ()=> fetch(`http://localhost:5000/category/all`),
+                element: <CategoryTutorials/>
+            },
+
+            {
+                path:'/category/detailsPage/:id',
                 loader: ({params})=> fetch(`http://localhost:5000/tutorials/${params.id}`),
                 element: <DetailsPage></DetailsPage>
             },
+
+
             {
                 path:'/tutorials/detailsPage/:id',
                 loader: ({params})=> fetch(`http://localhost:5000/tutorials/detailsPage/${params.id}`),
