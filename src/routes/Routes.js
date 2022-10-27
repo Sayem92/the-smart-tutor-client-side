@@ -9,7 +9,6 @@ import Profile from "../components/Profile/Profile";
 import CategoryTutorials from "../components/TuitorialAll/CategoryTutorials/CategoryTutorials";
 import CheckOutPage from "../components/TuitorialAll/CheckOutPage/CheckOutPage";
 import DetailsPage from "../components/TuitorialAll/Tutorials/DetailsPage/DetailsPage";
-import Options from "../components/TuitorialAll/Tutorials/Options/Options";
 import Tutorials from "../components/TuitorialAll/Tutorials/Tutorials";
 import Main from "../layout/Main";
 import PrivateRoutes from "./PrivateRoutes";
@@ -30,30 +29,26 @@ import PrivateRoutes from "./PrivateRoutes";
             },
             {
                 path:'/tutorials',
-                loader: ()=> fetch('http://localhost:5000/tutorials'),
+                loader: ()=> fetch("https://assignment-10-server-one.vercel.app/tutorials"),
                 element: <Tutorials></Tutorials>
             },
-            // {
-            //     path:'/category/all',
-            //     loader: ()=> fetch('http://localhost:5000/category/name'),
-            //     element: <Options></Options>
-            // },
+           
             {
                 path:'/category/all',
-                loader: ()=> fetch(`http://localhost:5000/category/all`),
+                loader: ()=> fetch(`https://assignment-10-server-one.vercel.app/category/all`),
                 element: <CategoryTutorials/>
             },
 
             {
                 path:'/category/detailsPage/:id',
-                loader: ({params})=> fetch(`http://localhost:5000/tutorials/${params.id}`),
+                loader: ({params})=> fetch(`https://assignment-10-server-one.vercel.app/tutorials/${params.id}`),
                 element: <DetailsPage></DetailsPage>
             },
 
 
             {
                 path:'/tutorials/detailsPage/:id',
-                loader: ({params})=> fetch(`http://localhost:5000/tutorials/detailsPage/${params.id}`),
+                loader: ({params})=> fetch(`https://assignment-10-server-one.vercel.app/tutorials/detailsPage/${params.id}`),
                 element: <PrivateRoutes><CheckOutPage /></PrivateRoutes>
             },
             {
