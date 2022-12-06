@@ -5,10 +5,10 @@
 [https://the-smart-tutor.web.app/]
 
 ## Code Link Client
-[https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-Sayem92]
+[https://github.com/Sayem92/the-smart-tutor-client-side]
 
 ## Code Link Server
-[https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-Sayem92]
+[https://github.com/Sayem92/the-smart-tutor-server-side]
 
 
 ## key features
