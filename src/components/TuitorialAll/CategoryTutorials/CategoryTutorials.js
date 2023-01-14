@@ -22,7 +22,7 @@ const CategoryTutorials = () => {
     return (
         <div className='dark:bg-black'>
 
-            <div className="grid grid-cols-1  lg:grid-cols-3 gap-4 container mx-auto pt-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 container mx-auto pt-5">
 
                 <div className="space-y-2 bg-gray-700 h-96 m-2 py-5 rounded ml-7 lg:ml-5">
                     <h2 className="text-xl font-semibold tracking-widest uppercase mb-2 text-orange-300 pl-4">All Category here</h2>
@@ -67,7 +67,7 @@ const CategoryTutorials = () => {
                 {/* category type show display  */}
 
                 <div className='col-span-2 '>
-                    <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 p-2 '>
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 p-2 '>
                         {category ?
                             <> {
                                 newCategory?.map(category => <SingleCategory
