@@ -37,7 +37,7 @@ const Profile = () => {
                <div className='flex justify-between '>
                <button onClick={handleSubmit} className="block p-3 text-center rounded-sm text-gray-900 bg-violet-500">Submit</button>
                <Link to='/'>
-               <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-sky-400">Home</button></Link>
+               <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-gradient-to-r from-green-500 to-blue-500">Home</button></Link>
                </div>
 
 
