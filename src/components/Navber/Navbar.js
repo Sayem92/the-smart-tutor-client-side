@@ -144,7 +144,7 @@ const Navbar = () => {
                   <li>
                     <button
                       onClick={handleLogout}
-                      className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white hover:bg-sky-500 bg-sky-400 dark:bg-black dark:border transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                      className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white hover:bg-sky-500 bg-sky-400 transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                       aria-label="Logout"
                       title="Logout"
                     >
@@ -163,7 +163,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     to="/login"
-                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white hover:bg-sky-500 bg-sky-400 dark:bg-black dark:border   transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                    className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white hover:bg-sky-500 bg-sky-400 transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
                     aria-label="Login"
                     title="Login"
                   >

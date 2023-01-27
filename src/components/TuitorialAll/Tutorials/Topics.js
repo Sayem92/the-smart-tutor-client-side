@@ -16,7 +16,7 @@ const Topics = (props) => {
                 <p className="text-gray-300 text-sm">{description.slice(0, 65)}...</p>
 
                 <Link to={`/category/detailsPage/${id}`}>
-                    <button type="button" className="flex items-center justify-center w-full p-3 mt-6 font-semibold tracking-wide rounded-md bg-blue-500 dark:bg-black dark:border hover:bg-blue-600 text-white">Get Started</button>
+                    <button type="button" className="flex items-center justify-center w-full p-3 mt-6 font-semibold tracking-wide rounded-md bg-blue-500   hover:bg-blue-600 text-white">Get Started</button>
                 </Link>
             </div>
         </div>

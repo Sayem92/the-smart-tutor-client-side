@@ -11,17 +11,17 @@ const DetailsPage = () => {
 
     return (
         <div className="dark:bg-black md:py-10">
-        <div ref={ref} className="lg:w-9/12 lg:p-4 mx-auto pb-5  bg-gray-300 dark:bg-black dark:text-gray-300">
+        <div ref={ref} className="lg:w-9/12 lg:p-4 mx-auto pb-5  bg-gray-300 rounded-lg">
             <div  className="  ">
                 <div className='flex justify-between items-center'>
-                    <h2 className=" py-4 pl-6  font-bold text-3xl text-gray-900 dark:text-gray-300">{title}</h2>
+                    <h2 className=" py-4 pl-6  font-bold text-3xl text-gray-900 ">{title}</h2>
                     <div className='mr-5'>
 
                         <Pdf targetRef={ref}  x={3} y={1} scale={0.7} filename="tutorial-example.pdf">
 
                             {({ toPdf }) => <button
                              onClick={toPdf} 
-                             className="btn btn-success hover:bg-green-500 dark:bg-black dark:border-white dark:text-white">Pdf</button>}
+                             className="btn btn-success hover:bg-green-500  ">Pdf</button>}
                         </Pdf>
                     </div>
                 </div>
@@ -35,7 +35,7 @@ const DetailsPage = () => {
                     }
                     <div className="m-6 justify-center">
                         <Link to={`/tutorials/detailsPage/${id}`}>
-                            <button className="btn btn-success hover:bg-green-500 dark:bg-black dark:border-white  dark:text-white">Get Premium Access</button>
+                            <button className="btn btn-success hover:bg-green-500">Get Premium Access</button>
                         </Link>
                     </div>
                 </div>

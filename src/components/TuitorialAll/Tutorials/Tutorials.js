@@ -10,7 +10,7 @@ const Tutorials = () => {
     return (
         <div className='dark:bg-black pt-4'>
             <Link to='/category/all'>
-                <button className='flex justify-center items-center bg-orange-500 hover:bg-orange-400 dark:bg-gray-500 rounded text-2xl  p-2 font-semibold  text-white'>Open Category</button></Link>
+                <button className='flex justify-center items-center bg-orange-500 hover:bg-orange-400  rounded text-2xl  p-2 font-semibold  text-white'>Open Category</button></Link>
             <div className="grid grid-cols-1  lg:grid-cols-4 gap-4 container mx-auto mt-5">
 
                 {/* all tutorials display  */}
