@@ -41,7 +41,7 @@ const Pricing = () => {
                             </li>
                         </ul>
                         <Link to='/tutorials'>
-                        <button className="inline-flex items-center justify-center px-4 py-2 font-medium text-white uppercase transition-colors bg-gradient-to-r from-green-500 to-blue-500 rounded-md focus:outline-none">
+                        <button className="inline-flex items-center justify-center px-4 py-2 font-medium text-white uppercase transition-colors bg-gradient-to-r from-green-500 to-blue-500 rounded-md focus:outline-none hover:transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300">
                             Start free
                         </button>
                         </Link>
@@ -82,7 +82,7 @@ const Pricing = () => {
                             </li>
                         </ul>
                         <Link to='/tutorials'>
-                        <button className="inline-flex items-center justify-center px-4 py-2 font-medium text-white uppercase transition-colors bg-gradient-to-r from-green-500 to-blue-500 rounded-md focus:outline-none">
+                        <button className="inline-flex items-center justify-center px-4 py-2 font-medium text-white uppercase transition-colors bg-gradient-to-r from-green-500 to-blue-500 rounded-md focus:outline-none hover:transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300">
                             Start free trial
                         </button>
                         </Link>
@@ -128,7 +128,7 @@ const Pricing = () => {
                         </ul>
 
                         <Link to='/tutorials'>
-                        <button className="inline-flex items-center justify-center px-4 py-2 font-medium text-white uppercase transition-colors bg-gradient-to-r from-green-500 to-blue-500 rounded-md focus:outline-none">
+                        <button className="inline-flex items-center justify-center px-4 py-2 font-medium text-white uppercase transition-colors bg-gradient-to-r from-green-500 to-blue-500 rounded-md focus:outline-none hover:transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300">
                             Start free trial
                         </button>
                         </Link>

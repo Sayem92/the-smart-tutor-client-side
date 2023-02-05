@@ -35,7 +35,7 @@ const DetailsPage = () => {
                     }
                     <div className="m-6 justify-center">
                         <Link to={`/tutorials/detailsPage/${id}`}>
-                            <button className="btn border-none bg-gradient-to-r from-green-500 to-blue-500 ">Get Premium Access</button>
+                            <button className="btn border-none bg-gradient-to-r from-green-500 to-blue-500 hover:transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110  duration-300">Get Premium Access</button>
                         </Link>
                     </div>
                 </div>
