@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import toast from 'react-hot-toast';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import logo from '../../assets/logo.png'
 import { AuthContext } from '../../contexts/UserContext/UserContext';
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext)
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // console.log(user);
+  const navigate = useNavigate();
 
   let activeStyle = {
     textDecoration: "underline",
@@ -16,7 +16,9 @@ const Navbar = () => {
 
   const handleLogout = () => {
     logOut()
-      .then(() => { })
+      .then(() => { 
+        navigate('/')
+      })
       .catch(error => console.log(error))
     toast.success('logout successfully')
   }
